@@ -6,13 +6,6 @@ st.set_page_config(
     layout="centered",
     initial_sidebar_state="auto",
 )
-hide_streamlit_style = """
-<style>
-    #root > div:nth-child(1) > div > div > div > div > section > div {padding-top: 0rem;}
-</style>
-
-"""
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 st.title("జై శ్రీ రామ్ 🚩")
 
