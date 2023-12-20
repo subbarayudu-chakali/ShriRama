@@ -9,15 +9,13 @@ st.set_page_config(
 
 hide_streamlit_style = """
 <style>
-    #root > div:nth-child(1) > div > div > div > div > section > div {padding-top: 2rem;}
+    #root > div:nth-child(1) > div > div > div > div > section > div {padding-top: 3rem;}
 </style>
 
 """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
-st.markdown("<h2 style='text-align: center; color: #15d888;'>జై శ్రీ రామ్ 🚩</h2>", unsafe_allow_html=True)
-# give one line gap after heading
-st.markdown("<br>", unsafe_allow_html=True)
-video_tab, gallery_tab, songs_tab = st.tabs(["అయోధ్య రామమందిరం లైవ్ వీడియో", "అయోధ్య ఫోటోలు", "శ్రీ రామచంద్రుడి పాటలు"])
+st.markdown("<h1 style='text-align: center; color: #15d888;'>జై శ్రీ రామ్ 🚩</h1>", unsafe_allow_html=True)
+video_tab, gallery_tab, songs_tab, ramakoti_tab = st.tabs(["అయోధ్య రామమందిరం లైవ్ వీడియో", "అయోధ్య ఫోటోలు", "శ్రీ రామచంద్రుడి పాటలు", "శ్రీ రామకోటి [లక్ష నామల లిఖిత జపం]"])
 with video_tab:
     st.subheader("Ram Mandir Live Video", divider="rainbow")
     st.info("Log back on 22 January 2024 for the live video :) ")
@@ -25,6 +23,7 @@ with gallery_tab:
     st.subheader("Ayodhya Gallery", divider="rainbow")
     st.info("We are collecting Photos for you :) ")
 with songs_tab:
+    st.subheader("Ram Mandir Songs", divider="rainbow")
     with st.expander("హరే కృష్ణ మంత్రం"):
         st.write("హరే కృష్ణ హరే కృష్ణ\n"
                  "\nకృష్ణ కృష్ణ హరే హరే ||\n"
@@ -38,3 +37,6 @@ with songs_tab:
                  "\nकृष्ण कृष्ण हरे हरे ||\n"
                  "\nहरे राम हरे राम\n"
                  "\nराम राम हरे हरे ||")
+with ramakoti_tab:
+    st.subheader("Shri Ramakoti", divider="rainbow")
+    st.info("Expected date to start this Japa is 25 December 2023.")
