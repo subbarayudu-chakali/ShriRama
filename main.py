@@ -6,6 +6,13 @@ st.set_page_config(
     layout="centered",
     initial_sidebar_state="auto",
 )
+hide_default_format = """
+<style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+</style>
+"""
+st.markdown(hide_default_format, unsafe_allow_html=True)
 
 hide_streamlit_style = """
 <style>
@@ -26,7 +33,7 @@ seconds_remaining = time_remaining.seconds % 60
 # instead of markdown display using streamlit widgets for timer
 st.toast(f"{days_remaining} Days {hours_remaining} Hours {minutes_remaining} Minutes {seconds_remaining} Seconds to go 😍")
 
-ramakoti_tab, songs_tab, gallery_tab,= st.tabs(["శ్రీ రామకోటి [లక్ష నామల లిఖిత జపం]", "శ్రీ రామచంద్రుడి పాటలు", "అయోధ్య ఫోటోలు"])
+ramakoti_tab, songs_tab, gallery_tab, video_tab= st.tabs(["శ్రీ రామకోటి [లక్ష నామల లిఖిత జపం]", "శ్రీ రామచంద్రుడి పాటలు", "అయోధ్య ఫోటోలు", "Video"])
 # with video_tab:
 #     st.subheader("Ram Mandir Live Video / "అయోధ్య రామమందిరం లైవ్ వీడియో"", divider="rainbow")
 #     st.info("Log back on 22 January 2024 for the live video :) ")
@@ -691,3 +698,5 @@ with songs_tab:
     st.info("We are collecting more songs for you :) ")
 with ramakoti_tab:
     st.info("Expected date to start this Japa is 25 December 2023.")
+with video_tab:
+    st.video("https://youtu.be/lyFazCoV7UI")
